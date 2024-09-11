@@ -6,7 +6,7 @@
 /*   By: mawako <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:14:20 by mawako            #+#    #+#             */
-/*   Updated: 2024/09/08 17:54:59 by mawako           ###   ########.fr       */
+/*   Updated: 2024/09/11 14:31:09 by mawako           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ void	ft_putnbr_fd(int n, int fd)
 		return ;
 	}
 	s = ft_itoa(n);
-	len = ft_strlen(s);
-	write (fd, s, len);
-	return ;
+	if (s != NULL)
+	{
+		len = ft_strlen(s);
+		write (fd, s, len);
+		free(s);
+	}
 }

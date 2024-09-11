@@ -6,7 +6,7 @@
 /*   By: mawako <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 06:37:23 by mawako            #+#    #+#             */
-/*   Updated: 2024/09/07 14:20:30 by mawako           ###   ########.fr       */
+/*   Updated: 2024/09/11 16:34:53 by mawako           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ char	**ft_split(char const *s, char c)
 	if (!res)
 		return (0);
 	if (!split_words(res, s, c, 0))
-		return (0);
+		return (free(res), NULL);
 	return (res);
 }
