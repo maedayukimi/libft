@@ -6,7 +6,7 @@
 /*   By: mawako <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 17:49:30 by mawako            #+#    #+#             */
-/*   Updated: 2024/09/08 17:49:53 by mawako           ###   ########.fr       */
+/*   Updated: 2025/08/28 12:17:31 by mawako           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,22 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdint.h>
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
+int		ft_ishexdigit(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
